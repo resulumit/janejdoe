@@ -6,7 +6,7 @@ theme: "starter-academic"
 
 title: "Jane J. Doe" # Website name
 baseurl: "" # Website URL
-copyright: "Jane J. Doe &copy; 2020 -- {year}"" # Footer text, e.g. '© {year} Me'
+copyright: "Jane J. Doe &copy; 2020 -- {year}" # Footer text, e.g. '© {year} Me'
 
 ############################
 ## LANGUAGE
