@@ -23,11 +23,11 @@ twitter: ''
 email: j.j.doe@random.edu
 phone: +77 777 77 77
 address:
-  street: 42 Bendy Street
-  city: Random
+  street: "42 Bendy Street"
+  city: ""
   region: ""
   postcode: '7777'
-  country: ""
+  country: "Random"
   country_code: ""
 coordinates:
   latitude: ""

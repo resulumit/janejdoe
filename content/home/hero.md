@@ -21,4 +21,4 @@ advanced:
   css_class: ""
 ---
 
-My name is Jane J. Doe, and I am an associate professor at the University of Random. On this website you can find more [about myself](#about), my [academic work]](publications), and [contact details](#contact).
+My name is Jane J. Doe, and I am an associate professor at the University of Random. On this website you can find more [about myself](#about), my [academic work](publications), and [contact details](#contact).

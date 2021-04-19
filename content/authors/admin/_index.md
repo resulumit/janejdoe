@@ -41,6 +41,8 @@ superuser: true
 title: Jane J Doe
 ---
 
-I am an associate professor of economics at the University of Random. I specialise on *labour* economics, and my work on this topic has been published in journals such as the [*Journal of Labour Economics*](https://www.journals.uchicago.edu/toc/jole/current). I also write for various media outlets. 
+I am an associate professor of economics at the University of Random. I specialise in *labour* economics, and my work on this topic has been published in journals such as the [*Journal of Labour Economics*](https://www.journals.uchicago.edu/toc/jole/current). I also write for various media outlets. 
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/jjd_resume.pdf" "newtab" >}}CV{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/jjd_resume.pdf" "newtab" >}}CV{{< /staticref >}} for more information.
+
+
