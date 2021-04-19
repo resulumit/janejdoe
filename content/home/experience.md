@@ -25,7 +25,7 @@ experience:
   - title: Associate Professor of Economics
     company: University of Random
     company_url: ''
-    company_logo: org-r
+    company_logo: ""
     location: ""
     date_start: '2021-01-01'
     date_end: ''
@@ -34,7 +34,7 @@ experience:
   - title: Assistant Professor of Economics
     company: University of Economics
     company_url: ''
-    company_logo: org-e
+    company_logo: ""
     location: ""
     date_start: '2016-01-01'
     date_end: '2020-12-31'
@@ -43,7 +43,7 @@ experience:
   - title: Postdoctoral Researcher
     company: University of Law
     company_url: ''
-    company_logo: org-l
+    company_logo: ""
     location: ""
     date_start: '2015-01-01'
     date_end: '2015-12-31'
