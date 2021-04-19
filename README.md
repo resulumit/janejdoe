@@ -4,6 +4,6 @@ This repository holds the files for a demonstration website, for a workshop on c
 
 The resulting website can be viewed at [janejdoe.netlify.app](https://janejdoe.netlify.app/).
 
-Unless otherwise noted, all material is copyright Resul Umit, licensed [CC-BY-SA 3.0](https://github.com/resulumit/git_workshop/blob/master/LICENCE.md). An easy to read summary of this permissive licence is available on the [Creative Commons website](https://creativecommons.org/licenses/by-sa/3.0/).
+Unless otherwise noted, all material is copyright Resul Umit, licensed [CC-BY-SA 3.0](https://github.com/resulumit/workshop_website/blob/master/LICENCE.md). An easy to read summary of this permissive licence is available on the [Creative Commons website](https://creativecommons.org/licenses/by-sa/3.0/).
 
 
