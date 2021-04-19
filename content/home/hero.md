@@ -2,8 +2,8 @@
 widget: hero
 headless: true
 weight: 10
-title: Hugo Academic Starter
-hero_media: hero-academic.png
+title: "Welcome"
+hero_media: ""
 cta:
   label: '**Get Started**'
   url: https://wowchemy.com/templates/
@@ -22,6 +22,4 @@ advanced:
   css_class: fullscreen
 ---
 
-**The FREE, Hugo-based open source website builder and template trusted by 500,000+ sites.**
-
-**Build anything with widgets** - from landing pages, knowledge bases, and courses to academic resumés, conferences, and tech blogs.
+My name is Jane J. Doe, and I am an associate professor at the University of Random. On this website you can find more about myself, my academic work, and more.
