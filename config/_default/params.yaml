@@ -20,11 +20,11 @@ twitter: ''
 
 # Contact (edit or remove options as required)
 
-email: jdoe@example.org
+email: j.j.doe@random.edu
 phone: 777 777 77 77
 address:
-  street: 450 Serra Mall
-  city: Stanford
+  street: 42 Bendy Street
+  city: Random
   region: CA
   postcode: '94305'
   country: United States
@@ -48,12 +48,12 @@ contact_links:
     link: 'skype:echo123?call'
   - icon: keybase
     icon_pack: fab
-    name: Chat on Keybase
-    link: 'https://keybase.io/'
-  - icon: comments
-    icon_pack: fas
-    name: Discuss on Forum
-    link: 'https://discourse.gohugo.io'
+    name: ""
+    link: ""
+  - icon: ""
+    icon_pack: ""
+    name: ""
+    link: ""
 
 # Site header
 
