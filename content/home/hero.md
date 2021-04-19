@@ -18,7 +18,7 @@ design:
     gradient_start: '#004ba0'
     text_color_light: true
 advanced:
-  css_class: fullscreen
+  css_class: ""
 ---
 
 My name is Jane J. Doe, and I am an associate professor at the University of Random. On this website you can find more about myself, my academic work, and more.
