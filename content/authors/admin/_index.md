@@ -1,23 +1,23 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My academic interests include labour, economics, and labour economics.
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
+  - course: PhD in Labour Economics
+    institution: University of Economics
     year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
+  - course: MA in Economics
+    institution: University of Economics
     year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
+  - course: BSc in Law
+    institution: University of Law
     year: 2008
 email: "jjdoe@random.edu"
 highlight_name: false
-interests: [Artificial Intelligence, Computational Linguistics]
+interests: [Labour, Economics, Labour Economics]
 organizations:
-- name: Random University
+- name: University of Random
   url: https://www.random.edu/
-role: Professor of Artificial Intelligence
+role: Associate Professor of Economics
 social:
 - icon: envelope
   icon_pack: fas
@@ -41,8 +41,6 @@ superuser: true
 title: Jane J Doe
 ---
 
-Jane J Doe is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I am an associate professor of economics at the University of Random. I specialise on *labour* economics, and my work on this topic has been published in journals such as the [*Journal of Labour Economics*](https://www.journals.uchicago.edu/toc/jole/current). I also write for various media outlets. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
-
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/jjd_resume.pdf" "newtab" >}}CV{{< /staticref >}}.
