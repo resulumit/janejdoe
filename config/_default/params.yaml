@@ -44,14 +44,6 @@ contact_links:
     icon_pack: fab
     name: Skype Me
     link: 'skype:echo123?call'
-  - icon: keybase
-    icon_pack: fab
-    name: ""
-    link: ""
-  - icon: ""
-    icon_pack: ""
-    name: ""
-    link: ""
 
 # Site header
 
