@@ -26,8 +26,8 @@ address:
   street: "42 Bendy Street"
   city: ""
   region: ""
-  postcode: '7777'
-  country: "Random"
+  postcode: "RM 77777"
+  country: ""
   country_code: ""
 coordinates:
   latitude: ""
