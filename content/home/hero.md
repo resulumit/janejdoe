@@ -21,4 +21,6 @@ advanced:
   css_class: ""
 ---
 
-My name is Jane J. Doe, and I am an associate professor at the University of Random. On this website you can find more [about myself](#about), my [academic work](publications), and [contact details](#contact).
+My name is Jane J. Doe, and I am an associate professor at the University of Random. On this website you can find more information [about myself](#about), my [academic](publication/) and [other](blog/) writings, and [contact details](#contact).
+
+Note that this is a demonstration website, created by [Resul Umit](https://resulumit.com/) for his workshop on [creating websites for academics](https://github.com/resulumit/workshop_website). 
