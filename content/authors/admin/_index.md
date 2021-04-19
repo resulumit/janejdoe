@@ -13,7 +13,7 @@ education:
     year: 2008
 email: "jjdoe@random.edu"
 highlight_name: false
-interests: [Labour, Economics, Labour Economics]
+interests: [Economics, Labour Economics, Econometrics]
 organizations:
 - name: University of Random
   url: https://www.random.edu/
@@ -41,8 +41,8 @@ superuser: true
 title: Jane J Doe
 ---
 
-I am an associate professor of economics at the University of Random. I specialise in *labour* economics, and my work on this topic has been published in journals such as the [*Journal of Labour Economics*](https://www.journals.uchicago.edu/toc/jole/current). I also write for various media outlets. 
+I am an associate professor of economics at the University of Random. I specialise in *labour* economics. My work has featured in leading media outlets as well as academic journals.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/jjd_resume.pdf" "newtab" >}}CV{{< /staticref >}} for more information.
+Before joining the University of Random, I was an assistant professor at the University of Economics, and a post-doctoral researcher at the University of Law.
 
-
+{{< icon name="download" pack="fas" >}} {{< staticref "media/jjd_resume.pdf" "newtab" >}}Download my CV{{< /staticref >}} for more information.
