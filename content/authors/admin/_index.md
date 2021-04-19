@@ -45,4 +45,4 @@ I am an associate professor of economics at the University of Random. I speciali
 
 Before joining the University of Random, I was an assistant professor at the University of Economics, and a post-doctoral researcher at the University of Law.
 
-{{< icon name="download" pack="fas" >}} {{< staticref "media/jjd_resume.pdf" "newtab" >}}Download my CV{{< /staticref >}} for more information.
+{{< icon name="download" pack="fas" >}} Download {{< staticref "media/jjd_resume.pdf" "newtab" >}}my CV{{< /staticref >}} for more information.
