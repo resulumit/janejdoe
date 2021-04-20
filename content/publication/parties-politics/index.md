@@ -9,3 +9,5 @@ url_code: 'https://dataverse.harvard.edu/'
 url_dataset: 'https://dataverse.harvard.edu/'
 url_pdf: https://janejdoe.netlify.app/files/jjd_publication2020.pdf
 ---
+
+I am pleased to announce that my study on parties and politics is now in print. It is published in *the International Journal of Politics and Policy*.
