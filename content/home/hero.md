@@ -23,4 +23,4 @@ advanced:
 
 My name is Jane J. Doe, and I am an associate professor at the University of Random. On this website you can find more information [about myself](#about), my [academic](publication/) and [other](blog/) writings, and [contact details](#contact).
 
-Note that this is a demonstration website, for a workshop on [creating websites for academics](https://github.com/resulumit/workshop_website). 
+A demonstration website, for a workshop on [creating websites for academics](https://github.com/resulumit/workshop_website) --- by [Resul Umit](https://resulumit.com/). 

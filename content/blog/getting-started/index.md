@@ -1,87 +1,48 @@
 ---
+title: "Every academic should have a website, and here is why"
+subtitle: "Personal websites faciliate outreach and impression management, without the limitations of institutional websites"
+summary: ""
 authors:
 - admin
-- 吳恩達
-categories:
-- Demo
-- 教程
-date: "2020-12-13T00:00:00Z"
+categories: 
+- Academia
+- writing
+tags:
+- Academia
+- writing
+date: "2021-04-20T00:00:00Z"
 draft: false
 featured: true
-image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)'
-  focal_point: ""
-  placement: 2
-  preview_only: false
-lastmod: "2020-12-13T00:00:00Z"
+lastmod: ""
 projects: []
-subtitle: "Welcome \U0001F44B We know that first impressions are important, so we've populated your new site with some initial content to help you get familiar with everything in no time."
-summary: "Welcome \U0001F44B We know that first impressions are important, so we've populated your new site with some initial content to help you get familiar with everything in no time."
-tags:
-- Academic
-- 开源
-title: Welcome to Wowchemy, the website builder for Hugo
+image:
+  caption: ""
+  focal_point: ""
 ---
 
-## Overview
+As recently as less than a decade ago, [one in three academics in the UK were *hermits*](https://blogs.lse.ac.uk/writingforresearch/2014/03/01/are-you-an-academic-hermit/) --- there was no meaningful information about them on the internet.
 
-1. The Wowchemy website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site
-2. The template can be modified and customised to suit your needs. It's a good platform for anyone looking to take control of their data and online identity whilst having the convenience to start off with a **no-code solution (write in Markdown and customize with YAML parameters)** and having **flexibility to later add even deeper personalization with HTML and CSS**
-3. You can work with all your favourite tools and apps with hundreds of plugins and integrations to speed up your workflows, interact with your readers, and much more
+If this figure has improved over the years, that would be largely through institutional websites. Indeed, by now, almost all universities have dedicated pages on their academic staff.
 
+Nevertheless, individual control over these pages are often limited, at least in terms of:
 
+- what can academics put on these pages,
+- how these pages are organised, and
+- who can update them.
 
-## Get Started
+Therefore, I believe every academic should have a personal website. Addressing the limitations above, personal websites offer three main benefits.
 
-- 👉 [**Create a new site**](https://wowchemy.com/templates/)
-- 📚 [**Personalize your site**](https://wowchemy.com/docs/)
-- 💬 [Chat with the **Wowchemy community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- 🐦 Twitter: [@wowchemy](https://twitter.com/wowchemy) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithWowchemy](https://twitter.com/search?q=(%23MadeWithWowchemy%20OR%20%23MadeWithAcademic)&src=typed_query)
-- 💡 [Request a **feature** or report a **bug** for _Wowchemy_](https://github.com/wowchemy/wowchemy-hugo-modules/issues)
-- ⬆️ **Updating Wowchemy?** View the [Update Guide](https://wowchemy.com/docs/guide/update/) and [Release Notes](https://wowchemy.com/updates/)
+#### Academic outreach
+Personal websites increase the accessibility of our work for the scientific community. Make sure your website includes all your publications[^1] and your working papers that are ready to be seen.
 
-## Crowd-funded open-source software
+[^1]: Subject to the terms of author agreements with publishers, which, in most cases, allow for pre-prints to be posted online. 
 
-To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.
+#### Public outreach
+Personal websites are arguably even more important for non-academic audiences to access your work. They typically lack the resources and/or know-how to read our work on publishers' websites, especially if these are behind the paywall.
 
-### [❤️ Click here to become a sponsor and help support Wowchemy's future ❤️](https://wowchemy.com/plans/)
+Unlike the staff pages on institutional websites, personal websites offer space also for non-academic writing, such as blogposts.
 
-As a token of appreciation for sponsoring, you can **unlock [these](https://wowchemy.com/plans/) awesome rewards and extra features 🦄✨**
+#### Impression management
+First impressions matter, especially in academia. What would you like others to see when they google your name? A personal website would give you a high degree of control over their impression.
 
-## Ecosystem
-
-* **[Hugo Academic CLI](https://github.com/wowchemy/hugo-academic-cli):** Automatically import publications from BibTeX
-
-## Inspiration
-
-[Check out the latest **demo**](https://academic-demo.netlify.com/) of what you'll get in less than 10 minutes, or [view the **showcase**](https://wowchemy.com/user-stories/) of personal, project, and business sites.
-
-## Features
-
-- **Page builder** - Create *anything* with [**widgets**](https://wowchemy.com/docs/page-builder/) and [**elements**](https://wowchemy.com/docs/writing-markdown-latex/)
-- **Edit any type of content** - Blog posts, publications, talks, slides, projects, and more!
-- **Create content** in [**Markdown**](https://wowchemy.com/docs/writing-markdown-latex/), [**Jupyter**](https://wowchemy.com/docs/import/jupyter/), or [**RStudio**](https://wowchemy.com/docs/install-locally/)
-- **Plugin System** - Fully customizable [**color** and **font themes**](https://wowchemy.com/docs/customization/)
-- **Display Code and Math** - Code highlighting and [LaTeX math](https://en.wikibooks.org/wiki/LaTeX/Mathematics) supported
-- **Integrations** - [Google Analytics](https://analytics.google.com), [Disqus commenting](https://disqus.com), Maps, Contact Forms, and more!
-- **Beautiful Site** - Simple and refreshing one page design
-- **Industry-Leading SEO** - Help get your website found on search engines and social media
-- **Media Galleries** - Display your images and videos with captions in a customizable gallery
-- **Mobile Friendly** - Look amazing on every screen with a mobile friendly version of your site
-- **Multi-language** - 34+ language packs including English, 中文, and Português
-- **Multi-user** - Each author gets their own profile page
-- **Privacy Pack** - Assists with GDPR
-- **Stand Out** - Bring your site to life with animation, parallax backgrounds, and scroll effects
-- **One-Click Deployment** - No servers. No databases. Only files.
-
-## Themes
-
-Wowchemy and its templates come with **automatic day (light) and night (dark) mode** built-in. Alternatively, visitors can choose their preferred mode - click the moon icon in the top right of the [Demo](https://academic-demo.netlify.com/) to see it in action! Day/night mode can also be disabled by the site admin in `params.toml`.
-
-[Choose a stunning **theme** and **font**](https://wowchemy.com/docs/customization) for your site. Themes are fully customizable.
-
-## License
-
-Copyright 2016-present [George Cushen](https://georgecushen.com).
-
-Released under the [MIT](https://github.com/wowchemy/wowchemy-hugo-modules/blob/master/LICENSE.md) license.
+If you do not manage your online presence, others --- your current and previous institutions, conferences that you have ever attended, *etc*. --- will.
