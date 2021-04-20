@@ -1,5 +1,5 @@
 ---
-bio: My academic interests include politics, policy, and polity.
+bio: My academic interests include party politics, public policy, and international polities.
 education:
   courses:
   - course: PhD in Politics
@@ -13,7 +13,7 @@ education:
     year: 2008
 email: "jjdoe@random.edu"
 highlight_name: false
-interests: [Party politics, Public policy, International polity]
+interests: [Party politics, Public policy, International polities]
 organizations:
 - name: University of Kriens
   url: https://www.kriens.edu/
