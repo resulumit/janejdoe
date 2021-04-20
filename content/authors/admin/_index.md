@@ -45,4 +45,4 @@ I am an associate professor of politics at the University of Kriens. I specialis
 
 Before joining the University of Kriens, I was an assistant professor at the University of Emmen, and a post-doctoral researcher at the University of Meggen.
 
-{{< icon name="download" pack="fas" >}} {{< staticref "media/jjd_resume.pdf" "newtab" >}}Download my CV{{< /staticref >}} for more information.
+{{< icon name="download" pack="fas" >}} {{< staticref "../files/jjd_resume.pdf" "newtab" >}}Download my CV{{< /staticref >}} for more information.
