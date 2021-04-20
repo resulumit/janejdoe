@@ -20,15 +20,15 @@ twitter: ''
 
 # Contact (edit or remove options as required)
 
-email: j.j.doe@random.edu
+email: j.j.doe@kriens.edu
 phone: +77 777 77 77
 address:
   street: "42 Bendy Street"
-  city: ""
+  city: "Kriens"
   region: ""
-  postcode: "RM 77777"
-  country: ""
-  country_code: ""
+  postcode: ""
+  country: "Switzerland"
+  country_code: "CH"
 coordinates:
   latitude: ""
   longitude: ""
