@@ -6,10 +6,7 @@ authors:
 date: "2021-04-20"
 output: html_document
 categories: 
-- parties
-- R
-tags:
-- parties
+- Parties
 - R
 ---
 

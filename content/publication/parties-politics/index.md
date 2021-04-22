@@ -8,9 +8,7 @@ url_code: 'https://dataverse.harvard.edu/'
 url_dataset: 'https://dataverse.harvard.edu/'
 url_pdf: https://janejdoe.netlify.app/files/jjd_publication2020.pdf
 categories: 
-- parties
-tags:
-- parties
+- Parties
 ---
 
 ## Abstract
