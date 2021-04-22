@@ -6,10 +6,10 @@ authors:
 - admin
 categories: 
 - Academia
-- writing
+- communication
 tags:
 - Academia
-- writing
+- communication
 date: "2021-04-20T00:00:00Z"
 draft: false
 featured: true

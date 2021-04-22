@@ -5,6 +5,12 @@ authors:
 - admin
 date: "2021-04-20"
 output: html_document
+categories: 
+- parties
+- R
+tags:
+- parties
+- R
 ---
 
 Many countries are governed by ~~one~~ multiple political parties at the same time. Indeed, the number of parties in government --- the cabinet size --- is rarely one. 
