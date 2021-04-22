@@ -1,6 +1,6 @@
 ---
 title: "Recent trends in cabinet size"
-subtitle: "Average number of parties in government peaked in the last decade"
+subtitle: "The average number of parties in government peaked in the last decade"
 authors:
 - admin
 date: "2021-04-20"
@@ -9,10 +9,11 @@ output: html_document
 
 
 
-<p>Many countries are governed by not one, but multiple political parties at the same time. Indeed, number of parties in government — cabinet size — is rarely one.</p>
+<p>Many countries are governed by <del>one</del> multiple political parties at the same time. Indeed, the number of parties in government — the cabinet size — is rarely one.</p>
 <p>In this blogpost, I explore the average cabinet size, and how this average has been trending in the recent history.</p>
-<p>To do so, I turn to the <a href="http://www.parlgov.org/">Parliaments and Governments Database</a> (ParlGov), which brings together three inter-related datasets listed below. Here I work with only one of them: <em>Cabinet</em>.</p>
+<p>To do so, I turn to the <a href="http://www.parlgov.org/">Parliaments and Governments Database</a> (ParlGov), which brings together three inter-related datasets, as presented in Table <a href="#tab:rmd-table">1</a>. Here I work with only one of them: <em>Cabinet</em>.</p>
 <table>
+<caption><span id="tab:rmd-table">Table 1: </span> The three components of the ParlGov Database</caption>
 <thead>
 <tr class="header">
 <th>Dataset</th>
@@ -38,13 +39,14 @@ output: html_document
 </tr>
 </tbody>
 </table>
-<p>To start with, let’s load three packages that I need for this task, <code>dataverse</code> (to download the dataset from <a href="https://dataverse.harvard.edu/">Harvard Dataverse</a>), <code>tidyverse</code> (to clean, tidy, and plot the data), and <code>stargazer</code> (to table the data).</p>
+<p>To start with, let’s load three packages that I need for this task, <code>dataverse</code> (to download the dataset from <a href="https://dataverse.harvard.edu/">Harvard Dataverse</a>), <code>tidyverse</code> (to clean, tidy, and plot the data), and <code>knitr</code> (to table the data).</p>
+<p>I will leave the underlying R code visible, in case you are interested in this sort of thing.</p>
 <pre class="r"><code># load the packages needed
 
 library(dataverse)
 library(tidyverse)
-library(stargazer)</code></pre>
-<p>We can now download the data with the <code>get_dataframe_by_name</code> function.</p>
+library(knitr)</code></pre>
+<p>We can now download the dataset with the <code>get_dataframe_by_name</code> function.</p>
 <pre class="r"><code># download the data from harvard dataverse
 
 df_cabs &lt;- get_dataframe_by_name(
@@ -52,232 +54,271 @@ df_cabs &lt;- get_dataframe_by_name(
   dataset   = &quot;10.7910/DVN/Q6CVHX&quot;,
   server    = &quot;dataverse.harvard.edu&quot;
   )</code></pre>
-<p>As of 22 April 2021, there are 12070 observations and 19 variables in the dataset. For the numerical variables, we can create a table with summary statistics with the <code>stargazer</code> function.</p>
-<pre class="r"><code># download the dataset from harvard dataverse
+<p>How does the dataset look? We can use the <code>kable</code> function function to see. However, this is a large dataset. As of 22 April 2021, it has 12070 observations and 19 variables. Therefore, Table <a href="#tab:kable-table">2</a> displays only a random selection of these observations.</p>
+<pre class="r"><code># table a random selection of observations
 
-stargazer(as.data.frame(df_cabs), 
-          summary = TRUE, type = &quot;html&quot;,
-          summary.stat = c(&quot;mean&quot;, &quot;sd&quot;, &quot;min&quot;, &quot;max&quot;),
-          digits = 0.1)</code></pre>
-<table style="text-align:center">
-<tr>
-<td colspan="5" style="border-bottom: 1px solid black">
-</td>
+kable(sample_n(df_cabs, 10),
+             caption = &quot;Randomly selected 10 observations in the Cabinet dataset&quot;)</code></pre>
+<table>
+<caption><span id="tab:kable-table">Table 2: </span>Randomly selected 10 observations in the Cabinet dataset</caption>
+<colgroup>
+<col width="5%" />
+<col width="4%" />
+<col width="4%" />
+<col width="3%" />
+<col width="4%" />
+<col width="2%" />
+<col width="4%" />
+<col width="4%" />
+<col width="1%" />
+<col width="6%" />
+<col width="4%" />
+<col width="14%" />
+<col width="18%" />
+<col width="3%" />
+<col width="3%" />
+<col width="3%" />
+<col width="3%" />
+<col width="5%" />
+<col width="2%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">country_name_short</th>
+<th align="left">country_name</th>
+<th align="left">election_date</th>
+<th align="left">start_date</th>
+<th align="left">cabinet_name</th>
+<th align="right">caretaker</th>
+<th align="right">cabinet_party</th>
+<th align="right">prime_minister</th>
+<th align="right">seats</th>
+<th align="right">election_seats_total</th>
+<th align="left">party_name_short</th>
+<th align="left">party_name</th>
+<th align="left">party_name_english</th>
+<th align="right">left_right</th>
+<th align="right">country_id</th>
+<th align="right">election_id</th>
+<th align="right">cabinet_id</th>
+<th align="right">previous_cabinet_id</th>
+<th align="right">party_id</th>
 </tr>
-<tr>
-<td style="text-align:left">
-Statistic
-</td>
-<td>
-Mean
-</td>
-<td>
-St. Dev.
-</td>
-<td>
-Min
-</td>
-<td>
-Max
-</td>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">CZE</td>
+<td align="left">Czech Republic</td>
+<td align="left">2010-05-29</td>
+<td align="left">2013-07-10</td>
+<td align="left">Rusnok</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">52</td>
+<td align="right">200</td>
+<td align="left">ODS</td>
+<td align="left">Obcanská demokratická strana</td>
+<td align="left">Civic Democratic Party</td>
+<td align="right">7.3637</td>
+<td align="right">68</td>
+<td align="right">599</td>
+<td align="right">1062</td>
+<td align="right">1030</td>
+<td align="right">829</td>
 </tr>
-<tr>
-<td colspan="5" style="border-bottom: 1px solid black">
-</td>
+<tr class="even">
+<td align="left">AUS</td>
+<td align="left">Australia</td>
+<td align="left">2001-11-10</td>
+<td align="left">2001-11-26</td>
+<td align="left">Howard III</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">68</td>
+<td align="right">150</td>
+<td align="left">LPA</td>
+<td align="left">Liberal Party of Australia</td>
+<td align="left">Liberal Party of Australia</td>
+<td align="right">7.3903</td>
+<td align="right">33</td>
+<td align="right">760</td>
+<td align="right">812</td>
+<td align="right">423</td>
+<td align="right">1411</td>
 </tr>
-<tr>
-<td style="text-align:left">
-caretaker
-</td>
-<td>
-0.10
-</td>
-<td>
-0.30
-</td>
-<td>
-0
-</td>
-<td>
-1
-</td>
+<tr class="odd">
+<td align="left">GBR</td>
+<td align="left">United Kingdom</td>
+<td align="left">1929-05-30</td>
+<td align="left">1929-06-05</td>
+<td align="left">MacDonald II</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">287</td>
+<td align="right">615</td>
+<td align="left">Lab</td>
+<td align="left">Labour Party</td>
+<td align="left">Labour</td>
+<td align="right">4.3562</td>
+<td align="right">44</td>
+<td align="right">909</td>
+<td align="right">1290</td>
+<td align="right">1291</td>
+<td align="right">1556</td>
 </tr>
-<tr>
-<td style="text-align:left">
-cabinet_party
-</td>
-<td>
-0.30
-</td>
-<td>
-0.50
-</td>
-<td>
-0
-</td>
-<td>
-1
-</td>
+<tr class="even">
+<td align="left">ISR</td>
+<td align="left">Israel</td>
+<td align="left">1959-11-03</td>
+<td align="left">1959-12-17</td>
+<td align="left">Ben-Gurion XII</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">120</td>
+<td align="left">KP</td>
+<td align="left">Kidma vePituah</td>
+<td align="left">Progress and Development</td>
+<td align="right">NA</td>
+<td align="right">34</td>
+<td align="right">707</td>
+<td align="right">932</td>
+<td align="right">1083</td>
+<td align="right">1838</td>
 </tr>
-<tr>
-<td style="text-align:left">
-prime_minister
-</td>
-<td>
-0.10
-</td>
-<td>
-0.30
-</td>
-<td>
-0
-</td>
-<td>
-1
-</td>
+<tr class="odd">
+<td align="left">BEL</td>
+<td align="left">Belgium</td>
+<td align="left">1939-04-02</td>
+<td align="left">1945-02-12</td>
+<td align="left">Van Acker I</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">202</td>
+<td align="left">KVV</td>
+<td align="left">Katholieke Vlaamse Volkspartij</td>
+<td align="left">Catholic Flemish People’s Party</td>
+<td align="right">6.2000</td>
+<td align="right">64</td>
+<td align="right">882</td>
+<td align="right">808</td>
+<td align="right">29</td>
+<td align="right">2486</td>
 </tr>
-<tr>
-<td style="text-align:left">
-seats
-</td>
-<td>
-34.0
-</td>
-<td>
-53.0
-</td>
-<td>
-0
-</td>
-<td>
-470
-</td>
+<tr class="even">
+<td align="left">NOR</td>
+<td align="left">Norway</td>
+<td align="left">1930-10-20</td>
+<td align="left">1932-03-14</td>
+<td align="left">Hundseid</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">37</td>
+<td align="right">150</td>
+<td align="left">H</td>
+<td align="left">Høyre</td>
+<td align="left">Conservative Party</td>
+<td align="right">7.8994</td>
+<td align="right">9</td>
+<td align="right">866</td>
+<td align="right">1226</td>
+<td align="right">1227</td>
+<td align="right">1435</td>
 </tr>
-<tr>
-<td style="text-align:left">
-election_seats_total
-</td>
-<td>
-284.0
-</td>
-<td>
-193.0
-</td>
-<td>
-35
-</td>
-<td>
-709
-</td>
+<tr class="odd">
+<td align="left">BEL</td>
+<td align="left">Belgium</td>
+<td align="left">2019-05-26</td>
+<td align="left">2019-10-27</td>
+<td align="left">Wilmes I</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">150</td>
+<td align="left">PSC-CDH</td>
+<td align="left">Parti Social Chrétien – Centre Democrate Humaniste</td>
+<td align="left">Francophone Christian Social Party – Humanist Democratic Centre</td>
+<td align="right">5.4974</td>
+<td align="right">64</td>
+<td align="right">1048</td>
+<td align="right">1622</td>
+<td align="right">1621</td>
+<td align="right">1192</td>
 </tr>
-<tr>
-<td style="text-align:left">
-left_right
-</td>
-<td>
-5.0
-</td>
-<td>
-2.0
-</td>
-<td>
-0.40
-</td>
-<td>
-55.0
-</td>
+<tr class="even">
+<td align="left">ISR</td>
+<td align="left">Israel</td>
+<td align="left">1999-05-17</td>
+<td align="left">2001-03-07</td>
+<td align="left">Sharon I</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">120</td>
+<td align="left">Balad</td>
+<td align="left">Brit Le’umit Demokratit</td>
+<td align="left">National Democratic Assembly</td>
+<td align="right">0.7407</td>
+<td align="right">34</td>
+<td align="right">718</td>
+<td align="right">965</td>
+<td align="right">1138</td>
+<td align="right">805</td>
 </tr>
-<tr>
-<td style="text-align:left">
-country_id
-</td>
-<td>
-38.0
-</td>
-<td>
-22.0
-</td>
-<td>
-1.0
-</td>
-<td>
-534.0
-</td>
+<tr class="odd">
+<td align="left">NLD</td>
+<td align="left">Netherlands</td>
+<td align="left">2010-06-09</td>
+<td align="left">2012-04-23</td>
+<td align="left">Rutte II</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">150</td>
+<td align="left">SGP</td>
+<td align="left">Staatkundig Gereformeerde Partij</td>
+<td align="left">Political Reformed Party</td>
+<td align="right">8.7531</td>
+<td align="right">8</td>
+<td align="right">530</td>
+<td align="right">1028</td>
+<td align="right">804</td>
+<td align="right">1251</td>
 </tr>
-<tr>
-<td style="text-align:left">
-election_id
-</td>
-<td>
-593.0
-</td>
-<td>
-315.0
-</td>
-<td>
-1.0
-</td>
-<td>
-1,089.0
-</td>
+<tr class="even">
+<td align="left">IRL</td>
+<td align="left">Ireland</td>
+<td align="left">2016-02-26</td>
+<td align="left">2016-05-06</td>
+<td align="left">Kenny II</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">158</td>
+<td align="left">IA</td>
+<td align="left">Independent Alliance</td>
+<td align="left">Independent Alliance</td>
+<td align="right">NA</td>
+<td align="right">37</td>
+<td align="right">1002</td>
+<td align="right">1484</td>
+<td align="right">904</td>
+<td align="right">2622</td>
 </tr>
-<tr>
-<td style="text-align:left">
-cabinet_id
-</td>
-<td>
-830.0
-</td>
-<td>
-479.0
-</td>
-<td>
-0
-</td>
-<td>
-1,635
-</td>
-</tr>
-<tr>
-<td style="text-align:left">
-previous_cabinet_id
-</td>
-<td>
-810.0
-</td>
-<td>
-467.0
-</td>
-<td>
-0.0
-</td>
-<td>
-1,634.0
-</td>
-</tr>
-<tr>
-<td style="text-align:left">
-party_id
-</td>
-<td>
-1,125.0
-</td>
-<td>
-754.0
-</td>
-<td>
-0.0
-</td>
-<td>
-2,804.0
-</td>
-</tr>
-<tr>
-<td colspan="5" style="border-bottom: 1px solid black">
-</td>
-</tr>
+</tbody>
 </table>
-<p>Before we can visualise the trend over the years, we first need to get the data into the right shape. There are many helpful functions in the <code>tidyverse</code> family for this purpose.</p>
+<p>Before visualising the trend over the years, we need to get the data into the right shape. There are many helpful functions in the <code>tidyverse</code> family for this purpose.</p>
 <pre class="r"><code># tidy the data
 
 df_ends &lt;- df_cabs %&gt;% 
