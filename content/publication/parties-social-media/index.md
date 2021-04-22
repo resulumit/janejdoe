@@ -8,11 +8,8 @@ url_code: 'https://dataverse.harvard.edu/'
 url_dataset: 'https://dataverse.harvard.edu/'
 url_pdf: https://janejdoe.netlify.app/files/jjd_publication2018.pdf
 categories: 
-- parties
-- communication
-tags:
-- parties
-- communication
+- Parties
+- Communication
 ---
 
 I am happy that my paper on parties and social media has found a great home. It is now published in *the Quarterly Journal of Policy and Polity*.
