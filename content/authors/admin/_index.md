@@ -41,7 +41,7 @@ superuser: true
 title: Jane J. Doe
 ---
 
-I am an associate professor of politics at the University of Kriens. I specialise in *party* politics. My work has featured in leading media outlets as well as academic journals.
+I am an associate professor of politics at the University of Kriens. I specialise in *party* politics. My work has featured in leading media outlets as well as in academic journals.
 
 Before joining the University of Kriens, I was an assistant professor at the University of Emmen, and a post-doctoral researcher at the University of Meggen.
 
