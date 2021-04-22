@@ -1,0 +1,320 @@
+---
+title: "Recent trends in cabinet size"
+subtitle: "Average number of parties in government peaked in the last decade"
+authors:
+- admin
+date: "2021-04-20"
+draft: true
+output: html_document
+---
+
+
+
+<p>Many countries are governed by not one, but multiple political parties at the same time. Indeed, number of parties in government — cabinet size — is rarely one.</p>
+<p>In this blogpost, I explore the average cabinet size, and how this average has been trending in the recent history.</p>
+<p>To do so, I turn to the <a href="http://www.parlgov.org/">Parliaments and Governments Database</a> (ParlGov), which brings together three inter-related datasets listed below. Here I work with only one of them: <em>Cabinet</em>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Dataset</th>
+<th>Filename</th>
+<th>Observations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Parties</td>
+<td>view_party</td>
+<td>1700</td>
+</tr>
+<tr class="even">
+<td>Elections</td>
+<td>view_election</td>
+<td>1000</td>
+</tr>
+<tr class="odd">
+<td>Cabinets</td>
+<td>view_cabinet</td>
+<td>1600</td>
+</tr>
+</tbody>
+</table>
+<p>To start with, let’s load three packages that I need for this task, <code>dataverse</code> (to download the dataset from <a href="https://dataverse.harvard.edu/">Harvard Dataverse</a>), <code>tidyverse</code> (to clean, tidy, and plot the data), and <code>stargazer</code> (to table the data).</p>
+<pre class="r"><code># load the packages needed
+
+library(dataverse)
+library(tidyverse)
+library(stargazer)</code></pre>
+<p>We can now download the data with the <code>get_dataframe_by_name</code> function.</p>
+<pre class="r"><code># download the data from harvard dataverse
+
+df_cabs &lt;- get_dataframe_by_name(
+  filename  = &quot;view_cabinet.tab&quot;,
+  dataset   = &quot;10.7910/DVN/Q6CVHX&quot;,
+  server    = &quot;dataverse.harvard.edu&quot;
+  )</code></pre>
+<p>As of 22 April 2021, there are 12070 observations and 19 variables in the dataset. For the numerical variables, we can create a table with summary statistics with the <code>stargazer</code> function.</p>
+<pre class="r"><code># download the dataset from harvard dataverse
+
+stargazer(as.data.frame(df_cabs), 
+          summary = TRUE, type = &quot;html&quot;,
+          summary.stat = c(&quot;mean&quot;, &quot;sd&quot;, &quot;min&quot;, &quot;max&quot;),
+          digits = 0.1)</code></pre>
+<table style="text-align:center">
+<tr>
+<td colspan="5" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Statistic
+</td>
+<td>
+Mean
+</td>
+<td>
+St. Dev.
+</td>
+<td>
+Min
+</td>
+<td>
+Max
+</td>
+</tr>
+<tr>
+<td colspan="5" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+caretaker
+</td>
+<td>
+0.10
+</td>
+<td>
+0.30
+</td>
+<td>
+0
+</td>
+<td>
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+cabinet_party
+</td>
+<td>
+0.30
+</td>
+<td>
+0.50
+</td>
+<td>
+0
+</td>
+<td>
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+prime_minister
+</td>
+<td>
+0.10
+</td>
+<td>
+0.30
+</td>
+<td>
+0
+</td>
+<td>
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+seats
+</td>
+<td>
+34.0
+</td>
+<td>
+53.0
+</td>
+<td>
+0
+</td>
+<td>
+470
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+election_seats_total
+</td>
+<td>
+284.0
+</td>
+<td>
+193.0
+</td>
+<td>
+35
+</td>
+<td>
+709
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+left_right
+</td>
+<td>
+5.0
+</td>
+<td>
+2.0
+</td>
+<td>
+0.40
+</td>
+<td>
+55.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+country_id
+</td>
+<td>
+38.0
+</td>
+<td>
+22.0
+</td>
+<td>
+1.0
+</td>
+<td>
+534.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+election_id
+</td>
+<td>
+593.0
+</td>
+<td>
+315.0
+</td>
+<td>
+1.0
+</td>
+<td>
+1,089.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+cabinet_id
+</td>
+<td>
+830.0
+</td>
+<td>
+479.0
+</td>
+<td>
+0
+</td>
+<td>
+1,635
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+previous_cabinet_id
+</td>
+<td>
+810.0
+</td>
+<td>
+467.0
+</td>
+<td>
+0.0
+</td>
+<td>
+1,634.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+party_id
+</td>
+<td>
+1,125.0
+</td>
+<td>
+754.0
+</td>
+<td>
+0.0
+</td>
+<td>
+2,804.0
+</td>
+</tr>
+<tr>
+<td colspan="5" style="border-bottom: 1px solid black">
+</td>
+</tr>
+</table>
+<p>Before we can visualise the trend over the years, we first need to get the data into the right shape. There are many helpful functions in the <code>tidyverse</code> family for this purpose.</p>
+<pre class="r"><code># tidy the data
+
+df_ends &lt;- df_cabs %&gt;% 
+        filter(start_date &gt; as.Date(&quot;1948-12-31&quot;) &amp; start_date &lt; as.Date(&quot;2020-01-01&quot;)) %&gt;%
+        mutate(end_year = as.numeric(format(start_date,&#39;%Y&#39;))) %&gt;%
+        select(previous_cabinet_id, end_year) %&gt;%
+        distinct()
+
+df &lt;- df_cabs %&gt;%
+      filter(start_date &gt; as.Date(&quot;1948-12-31&quot;) &amp; start_date &lt; as.Date(&quot;2020-01-01&quot;))  %&gt;%
+      mutate(start_year = as.numeric(format(start_date,&#39;%Y&#39;))) %&gt;%
+      group_by(cabinet_id, start_year) %&gt;%
+      summarise(parties = sum(cabinet_party)) %&gt;%
+      ungroup() %&gt;%
+      left_join(., df_ends, by = c(&quot;cabinet_id&quot; = &quot;previous_cabinet_id&quot;)) %&gt;%
+      mutate(end_year = replace_na(end_year, 2019)) %&gt;%
+      pivot_longer(cols = c(&quot;start_year&quot;, &quot;end_year&quot;), values_to = &quot;year&quot;) %&gt;%
+      select(-name) %&gt;%
+      group_by(cabinet_id) %&gt;%
+      complete(cabinet_id, year = full_seq(year, 1)) %&gt;%
+      fill(parties) %&gt;%
+      group_by(year) %&gt;%
+      summarise(cabinet_size = mean(parties))</code></pre>
+<p>Now that the data is in the right shape, Figure <a href="#fig:plot">1</a> plots it.</p>
+<pre class="r"><code># plot the data
+
+ggplot(df, aes(x = year, y = cabinet_size)) +
+        geom_line(size = 1.5) +
+        theme_minimal() +
+        theme(axis.title = element_text(size = 14),
+              axis.text = element_text(size = 14)) +
+        labs(y = &quot;Average cabinet size\n&quot;, x = &quot;&quot;)</code></pre>
+<div class="figure"><span id="fig:plot"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/plot-1.png" alt="Average cabinet size, 1949--2019." width="672" />
+<p class="caption">
+Figure 1: Average cabinet size, 1949–2019.
+</p>
+</div>
+<p>The figure shows that the average number of parties in government peaked in the last decade.</p>

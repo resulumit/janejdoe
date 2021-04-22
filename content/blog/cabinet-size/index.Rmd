@@ -1,0 +1,107 @@
+---
+title: "Recent trends in cabinet size"
+subtitle: "Average number of parties in government peaked in the last decade"
+authors:
+- admin
+date: "2021-04-20"
+output: html_document
+---
+
+Many countries are governed by not one, but multiple political parties at the same time. Indeed, number of parties in government --- cabinet size --- is rarely one. 
+
+In this blogpost, I explore the average cabinet size, and how this average has been trending in the recent history.
+
+To do so, I turn to the [Parliaments and Governments Database](http://www.parlgov.org/) (ParlGov), which brings together three inter-related datasets listed below. Here I work with only one of them: *Cabinet*.
+
+
+| Dataset   | Filename      | Observations |
+|-----------|---------------|--------------|
+| Parties   | view_party    | 1700         |
+| Elections | view_election | 1000         |
+| Cabinets  | view_cabinet  | 1600         |
+
+To start with, let's load three packages that I need for this task, `dataverse` (to download the dataset from [Harvard Dataverse](https://dataverse.harvard.edu/)),  `tidyverse` (to clean, tidy, and plot the data), and `stargazer` (to table the data).
+
+```{r, load, warning=FALSE, message=FALSE, tidy=FALSE}
+
+# load the packages needed
+
+library(dataverse)
+library(tidyverse)
+library(stargazer)
+
+```
+
+We can now download the data with the `get_dataframe_by_name` function. 
+
+```{r, download, warning=FALSE, message=FALSE, tidy=FALSE}
+
+# download the data from harvard dataverse
+
+df_cabs <- get_dataframe_by_name(
+  filename  = "view_cabinet.tab",
+  dataset   = "10.7910/DVN/Q6CVHX",
+  server    = "dataverse.harvard.edu"
+  )
+
+```
+
+As of `r format(Sys.time(), '%d %B %Y')`, there are `r nrow(df_cabs)` observations and `r length(df_cabs)` variables in the dataset. For the numerical variables, we can create a table with summary statistics with the `stargazer` function.
+
+```{r, summarise, results="asis", warning=FALSE, message=FALSE, tidy=FALSE}
+
+# download the dataset from harvard dataverse
+
+stargazer(as.data.frame(df_cabs), 
+          summary = TRUE, type = "html",
+          summary.stat = c("mean", "sd", "min", "max"),
+          digits = 0.1)
+
+```
+
+Before we can visualise the trend over the years, we first need to get the data into the right shape. There are many helpful functions in the `tidyverse` family for this purpose.
+
+```{r, clean,  warning=FALSE, message=FALSE, tidy=FALSE}
+
+# tidy the data
+
+df_ends <- df_cabs %>% 
+        filter(start_date > as.Date("1948-12-31") & start_date < as.Date("2020-01-01")) %>%
+        mutate(end_year = as.numeric(format(start_date,'%Y'))) %>%
+        select(previous_cabinet_id, end_year) %>%
+        distinct()
+
+df <- df_cabs %>%
+      filter(start_date > as.Date("1948-12-31") & start_date < as.Date("2020-01-01"))  %>%
+      mutate(start_year = as.numeric(format(start_date,'%Y'))) %>%
+      group_by(cabinet_id, start_year) %>%
+      summarise(parties = sum(cabinet_party)) %>%
+      ungroup() %>%
+      left_join(., df_ends, by = c("cabinet_id" = "previous_cabinet_id")) %>%
+      mutate(end_year = replace_na(end_year, 2019)) %>%
+      pivot_longer(cols = c("start_year", "end_year"), values_to = "year") %>%
+      select(-name) %>%
+      group_by(cabinet_id) %>%
+      complete(cabinet_id, year = full_seq(year, 1)) %>%
+      fill(parties) %>%
+      group_by(year) %>%
+      summarise(cabinet_size = mean(parties))
+
+```
+
+Now that the data is in the right shape, Figure \@ref(fig:plot) plots it.
+
+```{r, plot, fig.cap='Average cabinet size, 1949--2019.', warning=FALSE, message=FALSE, tidy=FALSE}
+
+# plot the data
+
+ggplot(df, aes(x = year, y = cabinet_size)) +
+        geom_line(size = 1.5) +
+        theme_minimal() +
+        theme(axis.title = element_text(size = 14),
+              axis.text = element_text(size = 14)) +
+        labs(y = "Average cabinet size\n", x = "")
+
+```
+
+The figure shows that the average number of parties in government peaked in the last decade.

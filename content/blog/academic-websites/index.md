@@ -1,6 +1,6 @@
 ---
 title: "Every academic should have a website, and here is why"
-subtitle: "Personal websites faciliate outreach and impression management, without the limitations of institutional websites"
+subtitle: "Personal websites facilitate outreach and impression management, without the limitations of institutional websites"
 summary: ""
 authors:
 - admin
