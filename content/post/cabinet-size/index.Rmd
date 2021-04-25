@@ -59,7 +59,7 @@ How does the dataset look? We can use the `kable` function function to see. Howe
 # table a random selection of observations
 
 kable(sample_n(df_cabs, 10),
-             caption = "Randomly selected 10 observations in the Cabinet dataset")
+      caption = "Randomly selected 10 observations in the Cabinet dataset")
 
 ```
 
